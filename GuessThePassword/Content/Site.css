@@ -1,12 +1,20 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    /* Background pattern from subtlepatterns.com */
+    background-image: url("img/hexellence.png");
+    color: black;
+    font-size: 26px;
+    font-family: 'Andale Mono', monospace;
+    font-weight: 400;
+    margin: 0px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+.container {
+  
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +30,286 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.button {
+    border-radius: 8px;
+    background-color: #008CBA;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 15px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: brightness(80%);
+    transition: 1.0s;
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 10px;
+}
+
+    .button:hover {
+        filter: brightness(100%);
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.9s;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.9s;
+        }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+.buttonl {
+    border-radius: 8px;
+    background-color: #008CBA;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 22px;
+    padding: 15px;
+    width: 270px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: brightness(80%);
+    transition: 1.0s;
+}
+
+    .buttonl:hover {
+        filter: brightness(100%);
+    }
+
+    .buttonl span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.9s;
+    }
+
+        .buttonl span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.9s;
+        }
+
+    .buttonl:hover span {
+        padding-right: 25px;
+    }
+
+        .buttonl:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+
+#contentUP {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.buttonstart {
+    background-color: #e5e5e5;
+    color: black;
+    padding: 20px 23px 20px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 28px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 90%;
+    letter-spacing: 3px;
+    border: 5px #4ea6ca;
+    border-style: outset;
+    -webkit-box-shadow: 10px 10px 76px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 76px -11px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 76px -11px rgba(0,0,0,0.75);
+}
+
+    .buttonstart span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.9s;
+    }
+
+        .buttonstart span:after {
+            content: '\00AB';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.9s;
+        }
+
+        .buttonstart span:before {
+            content: '\00BB';
+            opacity: 0;
+            transition: 0.9s;
+            top: 0;
+            transition: 0.9s;
+        }
+
+    .buttonstart:hover {
+        border-radius: 100%;
+    }
+
+        .buttonstart:hover span {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+            .buttonstart:hover span:after {
+                opacity: 1;
+                right: 0;
+            }
+
+            .buttonstart:hover span:before {
+                opacity: 1;
+                right: 0;
+            }
+
+#password {
+    padding-top: 5px;
+    margin-top: 50px;
+    margin-bottom: 140px;
+    text-align: center;
+    font-size: 48px;
+    min-height: 60px;
+    border-top: solid #626262;
+    border-bottom: solid #626262;
+    border-left: solid #626262;
+    border-right: solid #626262;
+    -webkit-box-shadow: 10px 10px 76px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 76px -11px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 76px -11px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    padding-bottom: 5px;
+}
+
+#firstContentBottom {
+    padding-top: 5px;
+    margin-top: 50px;
+    margin-bottom: 140px;
+    text-align: center;
+    font-size: 48px;
+    min-height: 60px;
+}
+
+
+#time, #firstContentUp {
+    margin-top: 50px;
+    margin-bottom: 140px;
+    text-align: center;
+    font-size: 48px;
+    min-height: 60px;
+}
+
+#contentDown {
+    -webkit-box-shadow: 0px 0px 64px 41px rgba(247,247,247,1);
+    -moz-box-shadow: 0px 0px 64px 41px rgba(247,247,247,1);
+    box-shadow: 0px 0px 64px 41px rgba(247,247,247,1);
+    border: 0px solid #000000;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 910px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+#animation {
+    float: left;
+    width: 450px;
+    text-align: center;
+    min-height: 280px;
+}
+
+img {
+    border-radius: 5px;
+    background-color: black;
+    z-index: 555555;
+    position: relative;
+}
+
+#alphabet {
+    float: left;
+    width: 400px;
+    text-align: center;
+    min-height: 280px;
+    margin-left: 50px;
+}
+
+.reset {
+    color: green;
+    cursor: pointer;
+    font-size: 48px;
+}
+
+    .reset:hover {
+        color: red;
+    }
+
+.letters {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    padding: 6px;
+    margin: 5px;
+    border: 3px;
+    border-style: dashed solid;
+    float: left;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    transition: 0.5s;
+    z-index: 10000;
+    padding-top: 1px;
+}
+
+    .letters:hover {
+        background-color: black;
+        color: white;
+        border: 3px solid white;
+        -webkit-box-shadow: 0px 0px 87px 52px rgba(250,250,250,0.85);
+        -moz-box-shadow: 0px 0px 87px 52px rgba(250,250,250,0.85);
+        box-shadow: 0px 0px 87px 52px rgba(250,250,250,0.85);
+        position: relative;
+    }
