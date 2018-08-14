@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<GuessThePassword.Models.GuessThePassword_LastGames>
+
+@{
     ViewBag.Title = "Zgadnij hasło";
 }
 <script src="~/Scripts/game.js"></script>
@@ -28,8 +30,33 @@
     </article>
 </main>
 
+@*<input class="btn btn-primary" name="submitButton" id="btnSave" onclick="GetLastRecords()" value="Save" type="button">*@
+<table class="table wow fadeIn" id="tblResultLastGames" data-wow-delay="1.4s">
 
-</div>
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResultsID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+        </tr>
+    </thead>
+        @foreach (var item in Model.OrderByDescending(s => s.ResultsID))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ResultsID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+            </tr>
+        }
+
+</table>
+
 
 <script src="~/Scripts/dist/wow.js"></script>
 <script>

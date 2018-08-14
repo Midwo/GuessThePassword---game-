@@ -17,6 +17,11 @@
   
 }
 
+
+tr:hover {
+    background-color: white;
+}
+
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -38,20 +43,30 @@ textarea {
     color: #FFFFFF;
     text-align: center;
     font-size: 22px;
-    padding: 15px;
     width: 180px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-    margin-left: auto;
-    margin-right: auto;
     filter: brightness(80%);
-    transition: 1.0s;
     margin-left: 7px;
     margin-right: 7px;
     margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left:15px;
+    padding-right:15px;
 }
 
+#tblResultLastGames {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+main 
+{
+margin-bottom: 50px;
+}
     .button:hover {
         filter: brightness(100%);
     }
@@ -96,7 +111,6 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     filter: brightness(80%);
-    transition: 1.0s;
 }
 
     .buttonl:hover {
@@ -180,7 +194,6 @@ footer {
             opacity: 0;
             transition: 0.9s;
             top: 0;
-            transition: 0.9s;
         }
 
     .buttonstart:hover {
@@ -250,8 +263,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
     width: 910px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: justify;
 }
 

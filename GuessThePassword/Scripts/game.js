@@ -142,6 +142,54 @@ var time = 80;
 var	missQuantity = 9;
 var end = false;
 
+function GetLastRecords() {
+    $("#tblResultLastGames tbody tr").remove();
+    $.ajax({
+        type: 'POST',
+        url: "/Home/GetLast5Games",
+        dataType: 'json',
+        data: { id: '' },
+        success: function (data) {
+            var items = '';
+
+            $.each(data, function (i, item) {
+                var rows = "<tr>"
+                    + "<td class='recordsLastGame'>" + item.ResultsID + "</td>"
+                    + "<td class='recordsLastGame'>" + item.Date + "</td>"
+                    + "</tr>";
+                $('#tblResultLastGames tbody').append(rows);
+            });
+        },
+        error: function (ex) {
+            var r = jQuery.parseJSON(response.responseText);
+            alert("Message: " + r.Message);
+            alert("StackTrace: " + r.StackTrace);
+            alert("ExceptionType: " + r.ExceptionType);
+        }
+    });
+    return false;
+}
+
+function SaveLastGame()
+{
+    var std = {};
+    //std.Number = $("#Number").val();
+    //std.Number = numberHits;
+    $.ajax({
+        type: "POST",
+        url: "/Home/NewResult", // the URL of the controller action method
+        //data: '{std: ' + JSON.stringify(std) + '}',
+        dataType: "json",
+        contentType: "application/json; charset=utf-8",
+        success: function (result) {
+            GetLastRecords();
+        },
+        error: function (req, status, error) {
+            alert("Błąd wstawiania danych");
+        }
+    });
+}
+
 function write_truePassword()
 {
 	document.getElementById("password").innerHTML = hidePassword;
@@ -237,7 +285,7 @@ function choiceOfLevel()
      time = 80;
      missQuantity = 9;
      end = false;
-	 document.getElementById("alphabet").innerHTML = '<p>Wybór poziomu gry:</p><button class="buttonl" onclick="choiceOfTopic(1)"><span>Łatwy - 9 błędów </span></button><button class="buttonl" onclick="choiceOfTopic(2)"><span>Średni - 7 błęgów </span></button><button class="buttonl" onclick="choiceOfTopic(3)"><span>Trudny - 5 błedów </span></button>';
+	 document.getElementById("alphabet").innerHTML = '<p>Wybór poziomu gry:</p><button class="buttonl" onclick="choiceOfTopic(1)"><span>Łatwy - 9 szans</span></button><button class="buttonl" onclick="choiceOfTopic(2)"><span>Średni - 7 szans</span></button><button class="buttonl" onclick="choiceOfTopic(3)"><span>Trudny - 5 szans</span></button>';
 	
 }
 
@@ -309,7 +357,8 @@ function passwordSelection(type)
 
 function start()
 {
-	
+    SaveLastGame();
+
 	var tresc_diva = "";
 	
 	for (i=0; i<=34; i++)
