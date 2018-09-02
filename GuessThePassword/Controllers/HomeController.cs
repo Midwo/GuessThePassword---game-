@@ -15,6 +15,11 @@ namespace GuessThePassword.Controllers
             return View(db.LastGames.OrderByDescending(s => s.ResultsID).Take(5).ToList());
         }
 
+        public ActionResult Policy()
+        {
+            return View();
+        }
+
         public ActionResult NewResult(GuessThePassword_LastGames std)
         {
             std.Date = DateTime.Now.ToString();

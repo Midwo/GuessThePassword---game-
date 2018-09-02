@@ -375,16 +375,13 @@ function start()
 	write_truePassword();
 }
 
-String.prototype.setLetter = function(place, letter)
-{
-	if (place > this.length -1)
-	{
-		return this.toString();
-	}
-	else
-	{
-		return this.substr(0, place) + letter + this.substr(place+1);
-	}
+String.prototype.setLetter = function (place, letter) {
+    if (place > this.length - 1) {
+        return this.toString();
+    }
+    else {
+        return this.substr(0, place) + letter + this.substr(place + 1);
+    }
 }
 
 function sprawdz(nr)

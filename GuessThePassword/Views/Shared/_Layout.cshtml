@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <script src="Scripts/game.js"></script>
-    <link rel="stylesheet" href="~/Content/css/libs/animate.css">
+    <link rel="stylesheet" href="~/Content/animate.css">
 </head>
 <body>
   
@@ -19,7 +19,7 @@
 
                 <span>Wejdź na stronę główną: <a href="https://mdwojak.pl/">www.mdwojak.pl</a>.</span>
          
-            <p>&copy; @DateTime.Now.Year - Michał Dwojak</p>
+                <p>&copy; @DateTime.Now.Year - Michał Dwojak  <a href='@Url.Action("Policy", "Home")'>Polityka prywatności</a></p>
         </footer>
     </div>
 
